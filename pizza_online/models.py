@@ -10,7 +10,7 @@ class Pizza(models.Model):
 		return self.name
 
 class Topping(models.Model):
-	"""A entered kind of pizza"""
+	"""topping on a pizza"""
 	pizza = models.ForeignKey(Pizza, on_delete=models.CASCADE)
 	name = models.TextField()
 	date_added = models.DateTimeField(auto_now_add=True)
